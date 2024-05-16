@@ -1,0 +1,441 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/**/
+/* Aggiungi questo nelle tue definizioni CSS globali */
+.fade-enter {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+
+/*question*/
+/* Assicurati che questo CSS sia incluso nel tuo file CSS globale */
+.quiz-container {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.question {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.answer-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.answer-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Aggiungi questo per una semplice animazione fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.quiz-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+/*QUIZ */
+
+/* Stile per il contenitore del Quiz */
+.quiz-container {
+  max-width: 800px; /* Personalizza secondo le tue necessità */
+  margin: auto;
+  margin-top: 5rem; /* Spazio sopra per distanziare dal resto del contenuto */
+}
+
+.quiz-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera per un effetto sollevato */
+  background: #ffffff; /* Sfondo bianco per il card */
+}
+
+.quiz-card-body {
+  padding: 20px; /* Spazio interno per separare il contenuto dai bordi del card */
+}
+
+.quiz-loading, .quiz-error {
+  color: #ff0000; /* Colore rosso per messaggi di errore o caricamento */
+  font-weight: bold;
+}
+
+.quiz-content {
+  margin-top: 20px; /* Margine sopra per distanziare le domande dal testo di stato */
+}
+
+/* Adatta lo stile di Button per essere unico */
+.answer-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.answer-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+/* SUMMARY */
+.summary-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.summary-header {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.summary-question-item {
+  padding: 15px;
+  border-bottom: 1px solid #eaeaea; /* Linea sottile per separare le domande */
+}
+
+.summary-question-text, .summary-answer-text, .summary-answer-correct {
+  margin: 5px 0;
+}
+
+.summary-answer-text {
+  color: #0275d8; /* Blu per le risposte date */
+}
+
+.summary-answer-correct {
+  color: #5cb85c; /* Verde se corretta, rosso se sbagliata */
+  font-weight: bold;
+}
+
+.summary-results {
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-align: center; /* Centra il testo dei risultati finali */
+}
+
+.summary-results h2 {
+  margin-bottom: 10px;
+}
+
+/* HOME */
+
+/* Stili specifici per la pagina Home */
+.home-container {
+  text-align: center; /* Centra tutto il contenuto */
+  padding: 50px 20px; /* Spazio intorno al contenuto */
+  background-color: #f8f9fa; /* Sfondo chiaro per la pagina */
+}
+
+.home-title {
+  color: #007bff; /* Colore blu per il titolo */
+  margin-bottom: 20px; /* Spazio sotto il titolo */
+}
+
+.home-start-link {
+  padding: 10px 20px;
+  background-color: #28a745; /* Verde per il pulsante di avvio */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none; /* Rimuove il sottolineato */
+  font-size: 1.2em;
+  transition: background-color 0.3s, transform 0.3s; /* Transizioni per colore e trasformazione */
+}
+
+.home-start-link:hover {
+  background-color: #218838; /* Cambio di colore al passaggio del mouse */
+  transform: scale(1.05); /* Leggero ingrandimento al passaggio del mouse */
+}
+
+
+
+
+/* PROGRESS BAR */
+
+.progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0; /* Grigio chiaro per il fondo della barra */
+  border-radius: 20px;
+  height: 30px;
+  overflow: hidden; /* Importante per mantenere gli effetti all'interno della barra */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Effetto ombra leggera per profondità */
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, #1b619a, #47bc74); /* Gradiente viola */
+  border-radius: 20px;
+  transition: width 2s ease-in-out; /* Transizione fluida per l'animazione della larghezza */
+}
+
+
+
+/* TIMER*/
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seconds {
+  font-size: 16px;
+  color: #666;
+  margin-top: -5px;
+}
+
+
+
+
+
+
+/* COURSE CARD*/
+.custom-card {
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+.custom-card-img {
+  height: 200px;  /* Mantiene tutte le immagini delle card alla stessa altezza */
+  object-fit: cover;  /* Assicura che l'immagine copra l'intera area senza deformare */
+}
+
+
+
+/*ARTICLE CARD*/
+.unique-article-card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden; /* Mantiene l'immagine e altri contenuti all'interno dei bordi arrotondati */
+  background-color: #282c34;
+  margin: 10px;
+}
+
+.unique-article-img-top {
+  height: 25rem;
+  object-fit: cover; /* Assicura che l'immagine copra l'intera area allocata senza deformazioni */
+width: 100%;
+}
+
+.unique-article-body {
+  padding: 20px;
+}
+
+.unique-article-title {
+  margin-bottom: 10px;
+  font-size: 1.75rem;
+  color: #333;
+}
+
+.unique-article-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+
+
+/*HOME PAGE*/
+.hero-section {
+background-image: url('https://images.unsplash.com/photo-1455540904194-fc101941273a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  
+  
+}
+
+.container {
+  max-width: 960px; /* Centra e limita la larghezza dei contenuti interni */
+  
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+/* Stili aggiuntivi per il testo, spaziatura, ecc. */
+h2 {
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px; /* Aumenta la leggibilità del testo */
+}
+
+
+
+.divprincipale {
+  background-color: rgba(0, 0, 0, 0.4); 
+  
+
+}
+
+
+
+/* BACKGROUND IMAGE */
+body {
+  background-image: url('https://images.unsplash.com/photo-1506792006437-256b665541e2?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.navsfondo {
+  background-image: url('https://images.unsplash.com/photo-1506792006437-256b665541e2?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombra leggera per un effetto sollevato */
+position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+
+  
+}
+
+
+/*PROFESSOR CARD*/
+.professor-card {
+  border: none;
+}
+
+.professor-image-container img {
+  width: 100%; /* Adjust width as needed */
+  object-fit: cover; /* Keeps the aspect ratio, and crops the image */
+}
+
+.professor-body {
+  background-color: #f8f9fa; /* Light grey background, feel free to change */
+  padding: 20px;
+}
+
+.professor-title {
+  color: #0056b3; /* Bootstrap primary color */
+  font-size: 1.5em;
+}
+
+.professor-text {
+  color: #666;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.professor-text strong {
+  color: #333;
+}
+
+.professor-motto {
+  font-style: italic;
+  color: #999;
+}
+
+
+/*SPINNER*/
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0,0,0,0.1);
+  border-radius: 50%;
+  border-top-color: #3498db;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+
